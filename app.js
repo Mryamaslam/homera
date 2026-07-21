@@ -34,4 +34,17 @@
       if (success) success.classList.add("show");
     });
   }
+
+  document.querySelectorAll("#newsletterForm, .newsletter-form").forEach(function(nf){
+    nf.addEventListener("submit", function(e){
+      e.preventDefault();
+      var email = nf.querySelector('input[type="email"]');
+      if(!email || !email.value.trim()){ alert("Please enter your email."); return; }
+      nf.reset();
+      var note = nf.parentElement.querySelector(".nl-success") || document.getElementById("nlSuccess");
+      if(note){ note.style.display="block"; }
+      else { alert("Thanks — you're on the list."); }
+    });
+  });
+
 })();

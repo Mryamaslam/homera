@@ -13,12 +13,8 @@
       <a class="logo" href="index.html">Home<span>ra</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
       <nav class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="features.html">Features</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="customers.html">Customers</a>
-        <a href="blog.html">Blog</a>
-        <a class="active" href="contact.html">Contact</a>
+        <a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a>
+        <a href="customers.html">Customers</a><a href="blog.html">Blog</a><a class="active" href="contact.html">Contact</a>
       </nav>
       <a class="btn btn-primary" href="contact.html">Start Free Trial</a>
     </div>
@@ -33,39 +29,58 @@
   </div>
 
   <section>
-    <div class="wrap grid-2">
+    <div class="wrap contact-grid">
       <form class="form" id="contactForm">
         <div id="formSuccess" class="form-success">Thanks — your message is in. Our team will reach out shortly.</div>
-        <div>
-          <label for="name">Full name *</label>
-          <input id="name" name="name" required placeholder="Alex Morgan" />
+        <div class="form-row">
+          <div><label for="name">Full name *</label><input id="name" name="name" required placeholder="Alex Morgan" /></div>
+          <div><label for="email">Work email *</label><input id="email" name="email" type="email" required placeholder="alex@brokerage.com" /></div>
         </div>
-        <div>
-          <label for="email">Work email *</label>
-          <input id="email" name="email" type="email" required placeholder="alex@brokerage.com" />
+        <div class="form-row">
+          <div><label for="company">Brokerage / team *</label><input id="company" name="company" required placeholder="North Shore Collective" /></div>
+          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" /></div>
         </div>
-        <div>
-          <label for="company">Brokerage / team</label>
-          <input id="company" name="company" placeholder="North Shore Collective" />
+        <div class="form-row">
+          <div><label for="role">Your role</label>
+            <select id="role" name="role"><option>Agent</option><option selected>Team lead / Broker</option><option>Marketing manager</option><option>Other</option></select>
+          </div>
+          <div><label for="plan">Interested in</label>
+            <select id="plan" name="plan"><option value="starter">Starter</option><option value="pro" selected>Pro Desk</option><option value="brokerage">Brokerage</option><option value="demo">Product demo</option></select>
+          </div>
         </div>
-        <div>
-          <label for="plan">Interested in</label>
-          <select id="plan" name="plan">
-            <option value="starter">Starter</option>
-            <option value="pro" selected>Pro Desk</option>
-            <option value="brokerage">Brokerage</option>
-            <option value="demo">Product demo</option>
-          </select>
+        <div><label for="agents">Team size</label>
+          <select id="agents" name="agents"><option>Just me</option><option>2–5</option><option selected>6–20</option><option>21+</option></select>
         </div>
-        <div>
-          <label for="message">How can we help? *</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your listings volume and current tools."></textarea>
-        </div>
+        <div><label for="message">How can we help? *</label><textarea id="message" name="message" rows="5" required placeholder="Tell us about your listings volume, current tools, and what success looks like."></textarea></div>
+        <div><label><input type="checkbox" required style="width:auto;margin-right:8px" /> I agree to be contacted about Homera products. *</label></div>
         <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="muted" style="font-size:12px;margin-top:8px">By submitting you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
       </form>
+
       <div>
-        <img class="split-img" src="images/office.jpg" alt="Homera customer success team" />
-        <p class="muted" style="margin-top:16px">Email: <a href="mailto:hello@homera.com">hello@homera.com</a><br />Hours: Mon–Fri, 9am–6pm ET</p>
+        <div class="contact-cards">
+          <div class="contact-card"><h4>Sales</h4><p><a href="mailto:hello@homera.com">hello@homera.com</a><br />Mon–Fri, 9am–6pm ET</p></div>
+          <div class="contact-card"><h4>Support</h4><p><a href="mailto:support@homera.com">support@homera.com</a><br />Avg. reply under 4 hours</p></div>
+          <div class="contact-card"><h4>HQ</h4><p>214 Market Street, Suite 400<br />Austin, TX 78701</p></div>
+        </div>
+        <div class="map-box" style="margin-top:14px">
+          <div>
+            <strong>Visit or book a video walkthrough</strong>
+            <p class="muted" style="margin-top:8px">Prefer a live demo? <a href="mailto:hello@homera.com?subject=Demo%20request">Email sales</a> and we’ll send a calendar link.</p>
+          </div>
+        </div>
+        <img class="split-img" style="margin-top:14px;aspect-ratio:16/10" src="images/office.jpg" alt="Homera office" />
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#08101c">
+    <div class="wrap">
+      <div class="section-head reveal"><h2>Before you write in</h2><p class="muted">Quick answers that help us route you faster.</p></div>
+      <div class="faq">
+        <details open><summary>I want a product demo</summary><p>Choose “Product demo” in the form. We’ll schedule a 30-minute walkthrough on your listings.</p></details>
+        <details><summary>I need brokerage pricing</summary><p>Select Brokerage and share seat count — we’ll send a custom proposal.</p></details>
+        <details><summary>Existing customer support</summary><p>Email support@homera.com from your account address for fastest help.</p></details>
       </div>
     </div>
   </section>
