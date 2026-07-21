@@ -623,3 +623,18 @@ img { height: auto; }
   border-radius: 2px;
 }
 .logo-mark, .logo-text { display: none !important; }
+
+/* ---- Unique motion / section language ---- */
+/* Homera motion — glow stagger + soft scale */
+.reveal { opacity: 0; transform: translateY(36px) scale(.96); filter: blur(6px); transition: .9s var(--ease); }
+.reveal.in { opacity: 1; transform: none; filter: none; }
+.card { transition: transform .5s var(--ease), box-shadow .5s var(--ease), border-color .5s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 24px 50px rgba(47,230,200,.12); border-color: rgba(47,230,200,.35); }
+.stats-strip .stat-box { animation: hmPulse 4s ease-in-out infinite; }
+.stats-strip .stat-box:nth-child(2) { animation-delay: .4s; }
+.stats-strip .stat-box:nth-child(3) { animation-delay: .8s; }
+.stats-strip .stat-box:nth-child(4) { animation-delay: 1.2s; }
+@keyframes hmPulse { 0%,100%{ box-shadow: 0 0 0 rgba(47,230,200,0);} 50%{ box-shadow: 0 0 24px rgba(47,230,200,.15);} }
+.process .step { transition: transform .45s var(--ease), border-color .45s; }
+.process .step:hover { transform: translateY(-8px); border-color: rgba(47,230,200,.4); }
+.section-head h2 { background: linear-gradient(90deg,#eef5fb,#2fe6c8); -webkit-background-clip: text; background-clip: text; color: transparent; }
