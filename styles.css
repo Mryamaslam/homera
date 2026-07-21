@@ -442,3 +442,120 @@ textarea::placeholder {
   color: #7a8fa8 !important;
 }
 :root { --line: rgba(255,255,255,.16); }
+
+/* ---- Brand logo system ---- */
+/* ---- Brand logo system ---- */
+.logo, a.brand.logo, a.logo.brand {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  line-height: 1.1;
+}
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  position: relative;
+}
+.logo-mark svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.logo-text .word {
+  font-size: 1.05em;
+  line-height: 1;
+}
+.logo-text .tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-top: 3px;
+  opacity: .72;
+}
+footer .logo, footer a.brand {
+  text-align: left !important;
+}
+
+
+.logo-mark { background: linear-gradient(145deg,#2fe6c8,#3b9cff); color:#04241f; border-radius:12px; }
+.logo-text .word { font-family: Syne, sans-serif; font-size: 22px; color: var(--text, #f3f7fb); }
+.logo-text .accent { color: var(--accent, #2fe6c8); }
+.logo-text .tag { color: var(--muted, #8fa3bc); opacity: 1; }
+.review-avatar { background: rgba(47,230,200,.18); color: #2fe6c8; }
+.review-card { background: #0c1624; }
+
+
+/* ---- Reviews section ---- */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+.review-card {
+  padding: 24px 22px;
+  border-radius: 18px;
+  border: 1px solid var(--line, rgba(127,127,127,.2));
+  background: var(--card, var(--panel, #fff));
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  transition: transform .35s var(--ease, ease);
+}
+.review-card:hover { transform: translateY(-6px); }
+.review-stars {
+  color: #f59e0b;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 1;
+}
+.review-card > p {
+  font-size: 15px;
+  line-height: 1.55;
+  flex: 1;
+  margin: 0;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .02em;
+  flex-shrink: 0;
+}
+.review-author strong {
+  display: block;
+  font-size: 14px;
+}
+.review-author .muted,
+.review-author span:last-child {
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+}
+@media (max-width: 900px) {
+  .reviews-grid { grid-template-columns: 1fr !important; }
+}
