@@ -443,59 +443,6 @@ textarea::placeholder {
 }
 :root { --line: rgba(255,255,255,.16); }
 
-/* ---- Brand logo system ---- */
-/* ---- Brand logo system ---- */
-.logo, a.brand.logo, a.logo.brand {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  line-height: 1.1;
-}
-.logo-mark {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  position: relative;
-}
-.logo-mark svg {
-  width: 22px;
-  height: 22px;
-  display: block;
-}
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-weight: 800;
-  letter-spacing: -.02em;
-}
-.logo-text .word {
-  font-size: 1.05em;
-  line-height: 1;
-}
-.logo-text .tag {
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  margin-top: 3px;
-  opacity: .72;
-}
-footer .logo, footer a.brand {
-  text-align: left !important;
-}
-
-
-.logo-mark { background: linear-gradient(145deg,#2fe6c8,#3b9cff); color:#04241f; border-radius:12px; }
-.logo-text .word { font-family: Syne, sans-serif; font-size: 22px; color: var(--text, #f3f7fb); }
-.logo-text .accent { color: var(--accent, #2fe6c8); }
-.logo-text .tag { color: var(--muted, #8fa3bc); opacity: 1; }
-.review-avatar { background: rgba(47,230,200,.18); color: #2fe6c8; }
-.review-card { background: #0c1624; }
 
 
 /* ---- Reviews section ---- */
@@ -649,3 +596,30 @@ img { height: auto; }
 @media (max-width: 900px) {
   .cookie-bar { left: 10px; right: 10px; bottom: 10px; }
 }
+
+/* ---- Brand logo system ---- */
+/* Homera logo — skyline bars + tracked wordmark */
+.logo.logo-homera, .logo {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.logo-homera .logo-icon { width: 42px; height: 34px; flex-shrink: 0; }
+.logo-homera .logo-copy { display: flex; flex-direction: column; gap: 5px; }
+.logo-homera .logo-name {
+  font-family: Syne, sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: .22em;
+  color: #eef5fb;
+  line-height: 1;
+}
+.logo-homera .logo-rule {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2fe6c8, transparent);
+  border-radius: 2px;
+}
+.logo-mark, .logo-text { display: none !important; }
