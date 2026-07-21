@@ -243,7 +243,7 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 28px; margin-top: 40
   transition: transform .25s, background .25s;
 }
 .faq details[open] summary::after {
-  content: "â€“";
+  content: "–";
   transform: none;
   background: rgba(127,127,127,.08);
 }
@@ -354,3 +354,91 @@ footer { border-top: 1px solid var(--line); padding: 48px 0 28px; margin-top: 40
   .nav-links{gap:14px;font-size:13px}
 }
 
+/* ---- UX readability / contrast / interaction fixes ---- */
+/* ---- UX readability / contrast / interaction fixes ---- */
+.stat-box span,
+.process .step p,
+.logos-row,
+.contact-card p {
+  opacity: 1 !important;
+}
+.stat-box span,
+.process .step p {
+  color: var(--muted) !important;
+}
+.faq details[open] summary::after {
+  content: "–" !important;
+}
+.btn {
+  transition: transform .35s var(--ease), background .25s ease, border-color .25s ease, box-shadow .25s ease, filter .25s ease !important;
+}
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  color: #6b7f96;
+}
+.footer-grid a:hover {
+  color: var(--ink, var(--text, #111));
+}
+.product.is-hidden,
+[data-product].is-hidden {
+  display: none !important;
+}
+.filter-panel {
+  display: none;
+  padding: 8px 0 12px;
+  border-bottom: 1px solid var(--line, #e5e5e5);
+}
+.filter-group.open .filter-panel { display: block; }
+.filter-group.open > button span { transform: rotate(45deg); display: inline-block; }
+.filter-panel label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--muted, #525252);
+}
+.filter-chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 16px; }
+.filter-chip {
+  border: 1px solid var(--line, #e5e5e5);
+  background: #fff;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter-chip.active {
+  background: var(--ink, #171717);
+  color: #fff;
+  border-color: transparent;
+}
+.filter-empty {
+  display: none;
+  color: var(--muted);
+  padding: 20px 0;
+}
+.filter-empty.show { display: block; }
+
+
+/* Homera contrast */
+.btn-ghost {
+  border-color: rgba(255,255,255,.28) !important;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,.1) !important;
+  border-color: rgba(47,230,200,.5) !important;
+}
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 14px 40px rgba(47,230,200,.35);
+}
+input::placeholder,
+textarea::placeholder {
+  color: #7a8fa8 !important;
+}
+:root { --line: rgba(255,255,255,.16); }
