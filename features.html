@@ -6,8 +6,17 @@
   <title>Features | Homera</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <meta name="theme-color" content="#050b14"/>
+  <meta name="description" content="Marketing OS for real estate agents — listing videos, social autopilot, and agent microsites."/>
+  <meta property="og:title" content="Features | Homera"/>
+  <meta property="og:description" content="Marketing OS for real estate agents — listing videos, social autopilot, and agent microsites."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://mryamaslam.github.io/homera/"/>
+  <meta name="twitter:card" content="summary_large_image"/>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="wrap nav">
       <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5L12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-8.5z" fill="currentColor"/></svg></span><span class="logo-text"><span class="word">Home<span class="accent">ra</span></span><span class="tag">Marketing OS</span></span></a>
@@ -23,6 +32,7 @@
       <a class="btn btn-primary" href="contact.html">Start Free Trial</a>
     </div>
   </header>
+<main id="main">
 
   <div class="page-hero">
     <div class="wrap">
@@ -34,7 +44,7 @@
 
   <section>
     <div class="wrap grid-2">
-      <img class="split-img" src="images/home.jpg" alt="Featured property photography" />
+      <img class="split-img" src="images/home.jpg" alt="Featured property photography" / loading="lazy" decoding="async">
       <div>
         <h2>Listing video kits</h2>
         <p class="muted" style="margin:12px 0 16px">Drop in photos and property details. Homera builds vertical and landscape videos with music, captions, and your brand kit.</p>
@@ -58,13 +68,13 @@
           <li>Performance insights by post type</li>
         </ul>
       </div>
-      <img class="split-img" src="images/agent.jpg" alt="Agent reviewing campaign results" />
+      <img class="split-img" src="images/agent.jpg" alt="Agent reviewing campaign results" / loading="lazy" decoding="async">
     </div>
   </section>
 
   <section>
     <div class="wrap grid-2">
-      <img class="split-img" src="images/keys.jpg" alt="Closing day keys handoff" />
+      <img class="split-img" src="images/keys.jpg" alt="Closing day keys handoff" / loading="lazy" decoding="async">
       <div>
         <h2>Agent microsites & lead capture</h2>
         <p class="muted" style="margin:12px 0 16px">Launch a fast personal site with listings, reviews, and smart forms that route to your CRM.</p>
@@ -83,7 +93,8 @@
     </div>
   </div>
 
-  <footer>
+  </main>
+<footer>
     <div class="wrap">
       <div class="footer-grid">
         <div><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 11.5L12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-8.5z" fill="currentColor"/></svg></span><span class="logo-text"><span class="word">Home<span class="accent">ra</span></span><span class="tag">Marketing OS</span></span></a></div>
@@ -95,5 +106,7 @@
     </div>
   </footer>
   <script src="app.js"></script>
+<div class="cookie-bar" id="cookieBar" role="dialog" aria-live="polite"><p>We use local storage for cart/demo preferences. See our <a href="privacy.html">Privacy</a>.</p><button type="button" class="btn btn-solid btn-primary btn-teal btn-red btn-sky" id="cookieAccept">Got it</button></div>
+<button type="button" class="to-top" id="toTop" aria-label="Back to top">↑</button>
 </body>
 </html>

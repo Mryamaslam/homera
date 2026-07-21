@@ -127,4 +127,39 @@
     applyFilters();
   })();
 
+
+  // a11y: mobile nav aria
+  if(t&&l){
+    t.setAttribute("aria-expanded","false");
+    t.setAttribute("aria-controls", l.id || "navLinks");
+    t.addEventListener("click", function(){
+      var open = l.classList.contains("open");
+      t.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  // cookie notice
+  (function(){
+    var key = "mm_cookie_ok";
+    try { if(localStorage.getItem(key)) return; } catch(e){}
+    var bar = document.getElementById("cookieBar");
+    if(!bar) return;
+    bar.classList.add("show");
+    var btn = document.getElementById("cookieAccept");
+    if(btn) btn.addEventListener("click", function(){
+      try { localStorage.setItem(key, "1"); } catch(e){}
+      bar.classList.remove("show");
+    });
+  })();
+
+  // back to top
+  (function(){
+    var btn = document.getElementById("toTop");
+    if(!btn) return;
+    window.addEventListener("scroll", function(){
+      if(window.scrollY > 500) btn.classList.add("show"); else btn.classList.remove("show");
+    }, {passive:true});
+    btn.addEventListener("click", function(){ window.scrollTo({top:0, behavior:"smooth"}); });
+  })();
+
 })();
