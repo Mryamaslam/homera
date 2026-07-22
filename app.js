@@ -55,7 +55,7 @@
       nf.reset();
       var note = nf.parentElement.querySelector(".nl-success") || document.getElementById("nlSuccess");
       if(note){ note.style.display="block"; }
-      else { alert("Thanks — you're on the list."); }
+      else { alert("Thanks, you're on the list."); }
     });
   });
 
@@ -85,7 +85,7 @@
       btn.addEventListener("click", function(){
         g.classList.toggle("open");
         var sp = btn.querySelector("span");
-        if(sp) sp.textContent = g.classList.contains("open") ? "–" : "+";
+        if(sp) sp.textContent = g.classList.contains("open") ? "-" : "+";
       });
     });
 
